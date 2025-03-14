@@ -1,0 +1,593 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 102.36px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px 40px;
+    color: white;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo-container {
+    flex: 3;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo img {
+    max-width: 300px;
+    height: auto;
+}
+
+.nav-container {
+    flex: 5;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.navbar-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    color: #FDFDFE;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-list a:hover {
+    color: #AEC1B8;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-list .active {
+    color: #AEC1B8;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+video {
+    transform: rotate(180deg);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#home {
+    background-color: rgba(0, 0, 0, 0);
+    height: 100vh;
+    margin-top: 100px;
+}
+
+#home h1 {
+    color: white;
+}
+
+#services {
+    background-color: #FEFEFE;
+}
+
+#services h2 {
+    color: #760078;
+    text-align: center;
+    font-size: 54px;
+    font-weight: bold;
+}
+
+.subtitle {
+    color: #28325A;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.services-container {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-card-grid {
+    display: grid;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 85px;
+}
+
+@media(min-width: 540px) {
+    .service-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 960px) {
+    .service-card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.service-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 363px;
+    height: 667px;
+    border-radius: 60px;
+    box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.4);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11.5%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 60px 60px 0 0;
+    z-index: 1;
+}
+
+.service-card.internet::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)), url('../assets/images/fondo-tarjeta-internet.png');
+}
+
+.service-card.datos::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)), url('../assets/images/fondo-tarjeta-datos.png');
+}
+
+.service-card.infraestructura::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)), url('../assets/images/fondo-tarjeta-infraestructura.png');
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2%;
+    background: linear-gradient(to right, #353562, #A561A9);
+    /* Degradado de abajo hacia arriba */
+    border-radius: 0 0 60px 60px;
+    /* Bordes redondeados en la parte inferior */
+}
+
+.service-content {
+    padding: 24px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Asegura que los elementos estén alineados hacia arriba */
+    align-items: stretch;
+    /* Hace que los elementos ocupen todo el ancho de la tarjeta */
+    color: black;
+    /* Asegúrate de que el color del texto sea adecuado */
+    background: #fefefe;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.service-title {
+    font-size: 32px;
+    color: #FEFEFE;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+.characteristics-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.characteristic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+.characteristic.bottom {
+    align-items: flex-start;
+}
+
+.characteristic.bottom h4 {
+    margin: 0%;
+}
+
+.characteristic-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.characteristic-name {
+    font-size: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.service-card-divider {
+    border: none;
+    border-top: 2px solid #750077;
+    margin: 5px 0;
+}
+
+.service-description {
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    color: black;
+    margin-top: 35px;
+}
+
+.extra-characteristic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 27px;
+}
+
+.extra-characteristic img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.extra-characteristic h4 {
+    font-size: 17px;
+    font: bold;
+    color: #333;
+    text-align: center;
+}
+
+#about-us {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Estilo para la sección de about-us-container */
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    /* Colocamos los elementos en una columna */
+    gap: 20px;
+    /* Añadimos un pequeño espacio entre los elementos */
+    padding: 25px;
+    /* Espaciado alrededor del contenedor */
+}
+
+/* Estilo para los elementos dentro de about-us-content (colocamos en columnas) */
+.about-us-content {
+    display: flex;
+    flex-direction: row;
+    /* Agrupamos los elementos verticalmente */
+    gap: 10px;
+    /* Espaciado entre los elementos */
+    justify-content: center;
+}
+
+.about-us-phrase-type2-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.about-us-phrase-type1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fefefe;
+    text-align: left;
+    margin: 0%;
+}
+
+.about-us-phrase-type2 {
+    font-size: 19px;
+    font-weight: 500;
+    color: #fefefe;
+    text-align: left;
+}
+
+.about-us-divider {
+    border: none;
+    border-top: 2px solid #fefefe;
+    opacity: 70%;
+    margin: 5px 0;
+}
+
+/* Estilo para la grilla de 2 columnas de value-card */
+.values-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas */
+    gap: 40px;
+    margin-top: 20px;
+    /* Espaciado entre las cards */
+}
+
+/* Estilo para cada value-card */
+.value-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* padding: 20px; */
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Estilo para la imagen dentro de cada value-card */
+.value-img {
+    width: 50px;
+    height: auto;
+    margin-right: 25px;
+}
+
+/* Estilo para los divs dentro de value-card que contienen h4 y p (agrupados en filas) */
+.value-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para el h4 dentro de value-card */
+.value-name {
+    font-size: 19px;
+    font-weight: bold;
+    min-width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #fefefe;
+}
+
+/* Estilo para el p dentro de value-card */
+.value-description {
+    font-size: 19px;
+    color: #fefefe;
+    text-align: left;
+}
+
+#our-network {
+    background-color: #FEFEFE;
+    padding: 30px;
+}
+
+#our-network h2 {
+    color: #760078;
+    text-align: center;
+    font-size: 54px;
+    font-weight: bold;
+}
+
+.network-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.network-info {
+    width: 50%;
+}
+
+.network-info p {
+    text-align: left;
+    color: #10253f;
+    font-size: 24px;
+}
+
+.network-map {
+    flex: 1;
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.network-map img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 60px;
+    box-shadow: 8px 15px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.network-map img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0px 15px rgba(0, 0, 0, 0.4);
+    filter: brightness(0.8);
+}
+
+/* El contenedor de la imagen modal (pop-up) */
+.modal {
+    visibility: hidden;
+    /* El modal está oculto al principio */
+    position: fixed;
+    /* Fija el modal a la pantalla */
+    z-index: 9999;
+    /* Aparece por encima de todo el contenido */
+    left: 0;
+    top: 0;
+    width: 100vw;
+    /* Asegura que cubra todo el ancho de la pantalla */
+    height: 100vh;
+    /* Asegura que cubra toda la altura de la pantalla */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo oscuro con opacidad */
+    padding: 20px;
+    /* Espacio alrededor de la imagen */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el tamaño total del modal */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Centra el contenido dentro del modal */
+    opacity: 0;
+    /* Inicia invisible */
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    /* Transición suave */
+}
+
+.modal.show {
+    /* display: flex; */
+    visibility: visible;
+    /* Hacer visible el modal */
+    opacity: 1;
+    /* Hace que el modal se vuelva visible */
+    transition: opacity 0.3s ease, visibility 0s;
+    /* Sin retardo en la visibilidad */
+}
+
+/* Imagen dentro del modal */
+.modal-content {
+    max-width: 70vw;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+/* El botón de cerrar (×) */
+.close {
+    color: #fff;
+    font-size: 8vh;
+    font-weight: bold;
+    position: absolute;
+    padding-right: 2vw;
+    padding-top: 2vh;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* El caption debajo de la imagen */
+#caption {
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+#contact {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #FEFEFE;
+    padding: 25px;
+}
+
+footer p {
+    margin: 0;
+    color: #10253f;
+}
+
+footer img {
+    width: 15%;
+    height: auto;
+    object-fit: contain;
+    margin-right: 30px;
+}
+
+section {
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h1,
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution Lan</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=NombreDeLaFuente&display=swap" rel="stylesheet">
+
+    <!-- Enlazar el archivo CSS externo -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Agregar favicon -->
+    <link id="favicon" rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Fondo de video que cubre toda la pantalla -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="assets/videos/background-video-4.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+
+    <!-- Sección Header con logo y navbar -->
+    <header>
+        <div class="logo-container">
+            <a href="#" class="logo">
+                <img src="assets/images/logo.png" alt="Logo de la Empresa">
+            </a>
+        </div>
+
+        <div class="nav-container">
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li><a href="#home">INICIO</a></li>
+                    <li><a href="#services">SERVICIOS</a></li>
+                    <li><a href="#about-us">NOSOTROS</a></li>
+                    <li><a href="#our-network">NUESTRA RED</a></li>
+                    <li><a href="#contact">CONTACTO</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Secciones de la landing page -->
+    <section id="home">
+        <h1>Conectividad a gran escala</h1>
+        <p>Tecnología de punta</p>
+    </section>
+
+    <section id="services">
+        <h2>SERVICIOS</h2>
+        <p class="subtitle">Soluciones de Comunicaciones para los mercados<br>Wholesale y Corporativo</p>
+
+        <div class="services-container">
+            <div class="service-card-grid">
+
+                <div class="service-card internet">
+                    <div class="service-content">
+                        <h3 class="service-title">Internet</h3>
+
+                        <div class="characteristics-container">
+                            <div class="characteristic top">
+                                <img class="characteristic-img" src="assets/images/icons-globo.png">
+                                <h4 class="characteristic-name">IP Transit</h4>
+                            </div>
+                            <div class="characteristic bottom">
+                                <img class="characteristic-img" src="assets/images/icons-centralized-network.png">
+                                <h4 class="characteristic-name" style="align-self: center;">DIA<br>(Direct Internet
+                                    Access)</h4>
+                            </div>
+                        </div>
+
+                        <hr class="service-card-divider">
+
+                        <p class="service-description">
+                            Conectividad a internet de alta calidad con ancho de banda dedicado
+                            y simétrico.<br><br>Interconexiones internacionales de nivel 1 con
+                            operadores Tier1 redundantes y contenidos locales en toda la región
+                            de Sudamérica.<br><br>Capacidades desde 10 Mb hasta 100 Gb ó mas.
+                        </p>
+
+                        <div class="extra-characteristic">
+                            <img src="assets/images/icons-escudo-de-seguridad.png">
+                            <h4>Servicios con Mitigación DDoS</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-card datos">
+                    <div class="service-content">
+                        <h3 class="service-title">Datos</h3>
+
+                        <div class="characteristics-container">
+                            <div class="characteristic top">
+                                <img class="characteristic-img" src="assets/images/icons-internet.png">
+                                <h4 class="characteristic-name">EPL (Ethernet Private Line)</h4>
+                            </div>
+                            <div class="characteristic bottom">
+                                <img class="characteristic-img" src="assets/images/icons-cable.png">
+                                <h4 class="characteristic-name" style="align-self: center;">FO (Fibra Oscura)</h4>
+                            </div>
+                        </div>
+
+                        <hr class="service-card-divider" style=" margin-top: 10.6px;">
+
+                        <p class="service-description">
+                            Transmisión de Datos entre distintos sitios, garantizando alta disponibilidad
+                            y confiabilidad.<br><br>Servicios de Capa 2, con soporte de QinQ.<br><br>
+                            Capacidades desde 10 Mb hasta 100 Gb ó mas.<br><br>Fibra Oscura sobre la
+                            cobertura de Red de SolutionLan.
+                        </p>
+
+                        <!-- <div class="extra-characteristic">
+                            <img>
+                            <h4>Servicios con Mitigación DDoS</h4>
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="service-card infraestructura">
+                    <div class="service-content">
+                        <h3 class="service-title">Infraestructura</h3>
+
+                        <div class="characteristics-container">
+                            <div class="characteristic top">
+                                <img class="characteristic-img" src="assets/images/icons-administrador-de-redes.png">
+                                <h4 class="characteristic-name">Proyectos de FTTH</h4>
+                            </div>
+                            <div class="characteristic bottom">
+                                <div class="characteristic-img"></div>
+                                <h4 class="characteristic-name"><br><br></h4>
+                            </div>
+                        </div>
+
+                        <hr class="service-card-divider">
+
+                        <p class="service-description">
+                            Desarrollo de Proyectos de FTTH llave en mano basados en los proyectos
+                            de nuestros clientes<br><br>Diseño, Planificación, Construcción y
+                            Mantenimiento de la Red
+                        </p>
+
+                        <!-- <div class="extra-characteristic">
+                            <img>
+                            <h4>Servicios con Mitigación DDoS</h4>
+                        </div> -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us">
+        <div class="about-us-container">
+
+            <div class="about-us-content">
+                <h3 class="about-us-phrase-type1">La pasión y el compromiso por lo que hacemos, nos convierte
+                    en el perfecto socio tecnológico de nuestros clientes.</h3>
+                <div class="about-us-phrase-type2-container">
+                    <p class="about-us-phrase-type2">Somos un Operador Neutral de Telecomunicaciones, con mas de
+                        15 años de operación en el mercado Argentino.</p>
+                    <p class="about-us-phrase-type2">Poseemos cobertura de Red en mas de 14 Municipios de la
+                        Provincia de Buenos Aires, con mas de 1.600 Km de fibra óptica de Red troncal y de
+                        acceso, y mas de 20 Nodos Inalámbricos.</p>
+                </div>
+            </div>
+
+            <hr class="about-us-divider">
+
+            <h3 class="about-us-phrase-type1">Nuestros Valores:</h3>
+
+            <div class="values-content">
+                <div class="value-card">
+                    <img class="value-img" src="assets/images/logo-valores.png">
+                    <div class="value-info">
+                        <h4 class="value-name">Flexibilidad y Creatividad</h4>
+                        <p class="value-description">Nos adaptamos siempre a las necesidades de nuestros Clientes</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <img class="value-img" src="assets/images/logo-valores.png">
+                    <div class="value-info">
+                        <h4 class="value-name">Agilidad</h4>
+                        <p class="value-description">La rapidez en nuestra respuesta es un valor agregado que
+                            nos caracteriza</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <img class="value-img" src="assets/images/logo-valores.png">
+                    <div class="value-info">
+                        <h4 class="value-name">Equipo</h4>
+                        <p class="value-description">Contamos con un Capital Humano altamente capacitado
+                            tanto a nivel técnico como de servicio</p>
+                    </div>
+                </div>
+                <div class="value-card">
+                    <img class="value-img" src="assets/images/logo-valores.png">
+                    <div class="value-info">
+                        <h4 class="value-name">Compromiso</h4>
+                        <p class="value-description">Tenemos pasión por lo que hacemos y eso refleja el
+                            compromiso que ponemos en nuestros servicios y Clientes</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="our-network">
+        <h2>NUESTRA RED</h2>
+        <p class="subtitle">Red Troncal de Fibra Optica | Red de Acceso</p>
+        <div class="network-container">
+            <div class="network-info">
+                <p>
+                    Tecnología de Red Carrier Class redundante<br><br>
+                    Centro de Operaciones de Red (NOC) 24x7<br><br>
+                    Supervisión y análisis proactivos continuos<br><br>
+                    Gestión de Red de manera segura, 24x7 y<br>con altos estándares de calidad
+                </p>
+            </div>
+            <div class="network-map">
+                <img src="assets/images/red-troncal.png" alt="Red Troncal del AMBA" id="redTroncal">
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal (pop-up) -->
+    <div id="mapa-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <section id="contact">
+        <h2>Contacto</h2>
+        <p>Formulario de contacto o información sobre cómo los usuarios pueden ponerse en contacto contigo.</p>
+    </section>
+
+    <footer>
+        <img src="assets/images/logo-footer.png" alt="Logo Solution Lan">
+        <p>&copy; Copyright 2025 Todos los derechos reservados</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>
