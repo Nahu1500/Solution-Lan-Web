@@ -59,3 +59,8 @@ window.onclick = function (event) {
         modal.classList.remove("show"); // Ocultar el modal
     }
 }
+
+window.onload = function () {
+    // Oculta el spinner una vez que la página ha terminado de cargarse
+    document.querySelector('.spinner-container').style.display = 'none';
+};

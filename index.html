@@ -17,6 +17,10 @@
 
 <body>
 
+    <div class="spinner-container">
+        <img src="assets/images/favicon.png" alt="Logo de la Empresa" class="spinner-logo" />
+    </div>
+
     <!-- Fondo de video que cubre toda la pantalla -->
     <div class="video-background">
         <video autoplay muted loop>
@@ -106,7 +110,7 @@
                             </div>
                         </div>
 
-                        <hr class="service-card-divider" style=" margin-top: 10.6px;">
+                        <hr class="service-card-divider" style=" margin-top: 13px;">
 
                         <p class="service-description">
                             Transmisión de Datos entre distintos sitios, garantizando alta disponibilidad
@@ -238,8 +242,40 @@
     </div>
 
     <section id="contact">
-        <h2>Contacto</h2>
-        <p>Formulario de contacto o información sobre cómo los usuarios pueden ponerse en contacto contigo.</p>
+        <div class="contact-container">
+            <div class="contact-logo">
+                <img class="contact-img" src="assets/images/icono.png">
+                <img class="contact-company-name" src="assets/images/empresa.png">
+            </div>
+            <div class="contact-form">
+                <h3 id="contact-form-title">Contáctanos:</h3>
+                <form>
+                    <div class="form-row">
+                        <!-- <label for="name">Nombre</label> -->
+                        <input type="text" id="name" name="name" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-column">
+                            <!-- <label for="phone">Teléfono</label> -->
+                            <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
+                        </div>
+                        <div class="form-column">
+                            <!-- <label for="email">Email</label> -->
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <!-- <label for="message">Mensaje</label> -->
+                        <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div class="contact-info">
+            <img id="mail-logo" src="assets/images/icons-mail.png">
+            <p id="contact-mail">contacto@solutionlan.com</p>
+        </div>
     </section>
 
     <footer>
