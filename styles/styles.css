@@ -33,6 +33,52 @@
     font-display: swap;
 }
 
+@keyframes serviceCardFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(500px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes valuesRightFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes valuesLeftFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(400px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 102.36px;
@@ -47,7 +93,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Contenedor del spinner (centrado en la pantalla) */
 .spinner-container {
     position: fixed;
     top: 0;
@@ -57,10 +102,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Fondo semitransparente */
+    background-color: #c2c2c2;
     z-index: 9999;
-    /* Asegura que el spinner esté encima de todo el contenido */
 }
 
 /* Estilo del logo que gira (spinner) */
@@ -81,6 +124,10 @@ body {
     100% {
         transform: rotate(360deg);
     }
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 header {
@@ -142,7 +189,7 @@ header.scrolled {
     font-weight: 600;
     letter-spacing: 5px;
     padding: 10px;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    transition: color 0.4s ease, text-shadow 0.4s ease;
 }
 
 .navbar-list a:hover {
@@ -186,17 +233,29 @@ video {
 
 #services {
     background-color: #FEFEFE;
+    overflow: hidden;
 }
 
-#services h2 {
+.title.animate {
+    opacity: 1;
+    animation: textFadeIn 1.7s ease-out backwards;
+}
+
+.title {
+    opacity: 0;
     color: #760078;
     text-align: center;
     font-family: 'LT Wave Black';
     font-size: 54px;
-    /* font-weight: bold; */
+}
+
+.subtitle.animate {
+    opacity: 1;
+    animation: textFadeIn 1.7s ease-out backwards;
 }
 
 .subtitle {
+    opacity: 0;
     color: #28325A;
     font-family: 'LT Wave Medium';
     font-size: 32px;
@@ -232,7 +291,13 @@ video {
     }
 }
 
+.service-card.animate {
+    opacity: 1;
+    animation: serviceCardFadeIn 0.8s ease-out backwards;
+}
+
 .service-card {
+    opacity: 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -244,8 +309,20 @@ video {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.service-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.service-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.service-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
 .service-card:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
     box-shadow: 0 0px 15px rgba(0, 0, 0, 0.4);
 }
 
@@ -426,7 +503,13 @@ video {
     justify-content: center;
 }
 
+.about-us-phrase-type1.animate {
+    opacity: 1;
+    animation: textFadeIn 1.7s ease-out backwards;
+}
+
 .about-us-phrase-type1 {
+    opacity: 0;
     font-family: 'LT Wave Medium';
     font-weight: lighter;
     font-size: 30px;
@@ -435,7 +518,13 @@ video {
     margin: 0%;
 }
 
+.about-us-phrase-type2.animate {
+    opacity: 1;
+    animation: textFadeIn 1.7s ease-out backwards;
+}
+
 .about-us-phrase-type2 {
+    opacity: 0;
     font-family: 'LT Wave Light';
     font-weight: lighter;
     font-size: 19px;
@@ -443,11 +532,19 @@ video {
     text-align: left;
 }
 
+.about-us-divider.animate {
+    width: 100%;
+    transform: scaleX(1);
+}
+
 .about-us-divider {
     border: none;
     border-top: 2px solid #fefefe;
     opacity: 70%;
     margin: 5px 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: width 1.5s ease-out, transform 1.5s ease-out;
 }
 
 /* Estilo para la grilla de 2 columnas de value-card */
@@ -460,8 +557,19 @@ video {
     /* Espaciado entre las cards */
 }
 
+.value-card.left.animate {
+    opacity: 1;
+    animation: valuesRightFadeIn 1.7s ease-out backwards;
+}
+
+.value-card.right.animate {
+    opacity: 1;
+    animation: valuesLeftFadeIn 1.7s ease-out backwards;
+}
+
 /* Estilo para cada value-card */
 .value-card {
+    opacity: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -505,14 +613,6 @@ video {
 #our-network {
     background-color: #FEFEFE;
     padding: 30px;
-}
-
-#our-network h2 {
-    color: #760078;
-    text-align: center;
-    font-family: 'LT Wave Black';
-    font-size: 54px;
-    font-weight: bold;
 }
 
 .network-container {

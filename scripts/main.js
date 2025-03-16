@@ -1,7 +1,6 @@
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.navbar-list a');
 
-// Obtener los elementos
 let modal = document.getElementById("mapa-modal");
 let img = document.getElementById("redTroncal");
 let modalImg = document.getElementById("modalImage");
@@ -12,17 +11,17 @@ window.addEventListener('scroll', () => {
     let currentSection = '';
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 50;
+        const sectionTop = section.offsetTop - 300;
         const sectionBottom = sectionTop + section.offsetHeight;
 
-        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+        if (window.scrollY >= sectionTop) {
             currentSection = section.getAttribute('id');
         }
     });
 
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href').substring(1) === currentSection) {
+        if (link.getAttribute('href').substring(1) === currentSection && window.scrollY > 0) {
             link.classList.add('active');
         }
     });
@@ -38,29 +37,79 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Cuando se hace clic en la imagen, mostrar el modal
 img.onclick = function () {
-    modal.classList.add("show"); // Mostrar el modal
-    modalImg.src = this.src; // Copiar la fuente de la imagen al modal
-    captionText.innerHTML = this.alt; // Establecer el texto alternativo de la imagen como caption
+    modal.classList.add("show");
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
 }
 
-// Obtener el botón de cerrar
 var closeBtn = document.getElementsByClassName("close")[0];
 
-// Cuando se hace clic en el botón de cerrar, ocultar el modal
 closeBtn.onclick = function () {
-    modal.classList.remove("show"); // Ocultar el modal
+    modal.classList.remove("show");
 }
 
-// Si se hace clic fuera del modal (en el fondo oscuro), también se cierra
 window.onclick = function (event) {
     if (event.target == modal) {
-        modal.classList.remove("show"); // Ocultar el modal
+        modal.classList.remove("show");
     }
 }
 
 window.onload = function () {
-    // Oculta el spinner una vez que la página ha terminado de cargarse
     document.querySelector('.spinner-container').style.display = 'none';
+
+    document.body.classList.remove('no-scroll');
 };
+
+document.body.classList.add('no-scroll');
+
+const handleIntersection = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+const observerOptions = {
+    root: null,
+    threshold: 0.1,
+};
+
+const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+const serviceCards = document.querySelectorAll('.service-card');
+const titles = document.querySelectorAll('.title');
+const subtitles = document.querySelectorAll('.subtitle');
+const about_us_divider = document.querySelector('.about-us-divider');
+const about_us_phrase_type1 = document.querySelectorAll('.about-us-phrase-type1');
+const about_us_phrase_type2 = document.querySelectorAll('.about-us-phrase-type2');
+const valueCards = document.querySelectorAll('.value-card');
+
+serviceCards.forEach(card => {
+    observer.observe(card);
+});
+
+titles.forEach(title => {
+    observer.observe(title);
+});
+
+subtitles.forEach(subtitle => {
+    observer.observe(subtitle);
+});
+
+observer.observe(about_us_divider);
+
+about_us_phrase_type1.forEach(phrase1 => {
+    observer.observe(phrase1);
+});
+
+about_us_phrase_type2.forEach(phrase2 => {
+    observer.observe(phrase2);
+});
+
+valueCards.forEach(card => {
+    observer.observe(card);
+});
