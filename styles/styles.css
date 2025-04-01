@@ -79,6 +79,55 @@
     }
 }
 
+@keyframes expand {
+    0% {
+        clip-path: circle(0% at 50% 50%);
+        opacity: 0;
+    }
+
+    100% {
+        clip-path: circle(150% at 50% 50%);
+        opacity: 1;
+    }
+}
+
+/* Animación de entrada de los títulos */
+@keyframes rotateAndScaleIn {
+    from {
+        transform: rotate(0deg) scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: rotate(360deg) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animación de salida de los títulos */
+@keyframes rotateAndScaleOut {
+    from {
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: rotate(360deg) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Animación de rotación de logo*/
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 102.36px;
@@ -113,17 +162,6 @@ body {
     height: auto;
     animation: spin 2s linear infinite;
     /* Animación de rotación */
-}
-
-/* Animación de rotación */
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 .no-scroll {
@@ -190,6 +228,7 @@ header.scrolled {
     letter-spacing: 5px;
     padding: 10px;
     transition: color 0.4s ease, text-shadow 0.4s ease;
+    animation: textFadeIn 1.7s ease-out backwards;
 }
 
 .navbar-list a:hover {
@@ -224,11 +263,21 @@ video {
 #home {
     background-color: rgba(0, 0, 0, 0);
     height: 100vh;
-    margin-top: 100px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
 }
 
 #home h1 {
+    position: absolute;
+    font-family: 'Nulshok Bold';
+    /* font-size: 80px; */
+    font-size: 9vh;
+    font-weight: bold;
     color: white;
+    opacity: 0;
+    animation: none;
+    /* Se gestionará solo por JS */
 }
 
 #services {
@@ -624,7 +673,13 @@ video {
     margin-bottom: 50px;
 }
 
+.network-info.animate {
+    opacity: 1;
+    animation: valuesRightFadeIn 1.7s ease-out backwards;
+}
+
 .network-info {
+    opacity: 0;
     width: 50%;
 }
 
@@ -635,7 +690,13 @@ video {
     font-size: 24px;
 }
 
+.network-map.animate {
+    opacity: 1;
+    animation: expand 3s ease-out backwards;
+}
+
 .network-map {
+    opacity: 0;
     flex: 1;
     width: 50%;
     height: auto;
@@ -763,6 +824,7 @@ video {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
 }
 
 #contact-form-title {
@@ -883,7 +945,6 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-section h1,
 section h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;

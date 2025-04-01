@@ -87,6 +87,8 @@ const about_us_divider = document.querySelector('.about-us-divider');
 const about_us_phrase_type1 = document.querySelectorAll('.about-us-phrase-type1');
 const about_us_phrase_type2 = document.querySelectorAll('.about-us-phrase-type2');
 const valueCards = document.querySelectorAll('.value-card');
+const ourNetworkDescription = document.querySelector('.network-info');
+const ourNetworkMap = document.querySelector('.network-map');
 
 serviceCards.forEach(card => {
     observer.observe(card);
@@ -112,4 +114,40 @@ about_us_phrase_type2.forEach(phrase2 => {
 
 valueCards.forEach(card => {
     observer.observe(card);
+});
+
+observer.observe(ourNetworkDescription);
+
+observer.observe(ourNetworkMap);
+
+// Todos los elementos h1
+const homeTitles = document.querySelectorAll('h1');
+let currentTitleIndex = 0;
+const totalTitles = homeTitles.length;
+const duration = 5000;  // Duración de cada título visible (en ms)
+
+// Inicializar el primer título visible
+setTimeout(() => {
+    homeTitles[currentTitleIndex].style.opacity = 1;
+    homeTitles[currentTitleIndex].style.animation = 'rotateAndScaleIn 1.5s ease-in-out forwards';
+}, 100);  // Retraso de 100ms antes de aplicar la animación
+
+// Función para manejar la rotación de títulos
+function rotateTitles() {
+    // Ocultar el título actual con la animación de salida
+    homeTitles[currentTitleIndex].style.animation = 'rotateAndScaleOut 2s ease-in-out forwards';
+
+    // Incrementar el índice para el siguiente título
+    currentTitleIndex = (currentTitleIndex + 1) % totalTitles;
+
+    // Mostrar el siguiente título con la animación de entrada
+    homeTitles[currentTitleIndex].style.opacity = 1;
+    homeTitles[currentTitleIndex].style.animation = 'rotateAndScaleIn 2s ease-in-out forwards';
+}
+
+// Inicializar la animación
+setInterval(rotateTitles, duration);  // Cambia cada 'duration' ms
+
+window.addEventListener('load', function () {
+    window.scrollTo(0, 0);
 });
