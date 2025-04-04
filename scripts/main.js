@@ -89,6 +89,9 @@ const about_us_phrase_type2 = document.querySelectorAll('.about-us-phrase-type2'
 const valueCards = document.querySelectorAll('.value-card');
 const ourNetworkDescription = document.querySelector('.network-info');
 const ourNetworkMap = document.querySelector('.network-map');
+const contactInfo = document.querySelector('.contact-info');
+const contactForm = document.querySelector('.contact-form');
+const contactLogo = document.querySelector('.contact-logo');
 
 serviceCards.forEach(card => {
     observer.observe(card);
@@ -119,6 +122,12 @@ valueCards.forEach(card => {
 observer.observe(ourNetworkDescription);
 
 observer.observe(ourNetworkMap);
+
+observer.observe(contactInfo);
+
+observer.observe(contactForm);
+
+observer.observe(contactLogo);
 
 // Todos los elementos h1
 const homeTitles = document.querySelectorAll('h1');
