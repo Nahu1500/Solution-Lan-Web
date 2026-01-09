@@ -1,292 +1,587 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solution Lan</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=NombreDeLaFuente&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=NombreDeLaFuente&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Enlazar el archivo CSS externo -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css" />
 
-    <!-- Agregar favicon -->
-    <link id="favicon" rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-</head>
+    <link
+      id="favicon"
+      rel="icon"
+      href="assets/images/favicon.png"
+      type="image/x-icon"
+    />
 
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
 
+  <body>
     <div class="spinner-container">
-        <img src="assets/images/favicon.png" alt="Logo de la Empresa" class="spinner-logo" />
+      <img
+        src="assets/images/favicon.png"
+        alt="Logo de carga"
+        class="spinner-logo"
+      />
     </div>
 
-    <!-- Fondo de video que cubre toda la pantalla -->
     <div class="video-background">
-        <video autoplay muted loop>
-            <source src="assets/videos/background-video-4.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
+      <video autoplay muted loop>
+        <source src="assets/videos/background-video.mp4" type="video/mp4" />
+        Tu navegador no soporta la etiqueta de video.
+      </video>
     </div>
 
-    <!-- Sección Header con logo y navbar -->
     <header>
-        <div class="logo-container">
-            <a href="#" class="logo">
-                <img src="assets/images/logo.png" alt="Logo de la Empresa">
-            </a>
-        </div>
+      <div class="logo-container">
+        <a href="#" class="logo">
+          <img src="assets/images/logo.png" alt="Logo Solution Lan Networks" />
+        </a>
+      </div>
 
-        <div class="nav-container">
-            <nav class="navbar">
-                <ul class="navbar-list">
-                    <li><a href="#home">INICIO</a></li>
-                    <li><a href="#services">SERVICIOS</a></li>
-                    <li><a href="#about-us">NOSOTROS</a></li>
-                    <li><a href="#our-network">NUESTRA RED</a></li>
-                    <li><a href="#contact">CONTACTO</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="nav-container">
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li><a href="#home">INICIO</a></li>
+            <li><a href="#services">SERVICIOS</a></li>
+            <li><a href="#about-us">NOSOTROS</a></li>
+            <li><a href="#our-network">NUESTRA RED</a></li>
+            <li><a href="#contact">CONTACTO</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <!-- Secciones de la landing page -->
+    <div class="language">
+      <input type="checkbox" id="language-toggle" class="language__checkbox" />
+
+      <label for="language-toggle" class="language__button">
+        <img src="/assets/images/ar.png" alt="Español" class="language__icon" />
+        <img
+          src="/assets/images/expand_more.png"
+          alt="Flecha Desplegable"
+          class="language__arrow-icon"
+        />
+      </label>
+
+      <ul id="language-dropdown" class="language__dropdown">
+        <li>
+          <a href="en-us/index-en.html">
+            <img
+              src="/assets/images/us.png"
+              alt="Inglés"
+              class="language__icon"
+            />
+            Inglés
+          </a>
+        </li>
+        <li>
+          <a href="#index">
+            <img
+              src="/assets/images/ar.png"
+              alt="Español"
+              class="language__icon"
+            />
+            Español
+          </a>
+        </li>
+      </ul>
+    </div>
+
     <section id="home">
-        <h1>Conectividad<br>a<br>Gran<br>Escala</h1>
-        <h1>Tecnología<br>de punta a<br>punta</h1>
-        <h1>Innovación<br>constante</h1>
-        <h1>Contactanos<br>hoy mismo</h1>
-        <!-- <p>Tecnología de punta</p> -->
+      <div class="scene hero-scene">
+        <h1 class="title-home">
+          <div class="title-line animate-line">CONECTIVIDAD</div>
+
+          <div class="title-line title-flex">
+            <span class="main-word animate-line">A</span>
+
+            <span class="subtitle-home">
+              TECNOLOGÍA DE<br />
+              PUNTA A PUNTA
+            </span>
+          </div>
+
+          <div class="title-line animate-line">GRAN</div>
+          <div class="title-line animate-line">ESCALA</div>
+        </h1>
+      </div>
+
+      <div class="scene hero-scene">
+        <h1 class="title-home">
+          <div class="title-line animate-line">DATOS</div>
+          <div class="title-line animate-line">INTERNET</div>
+
+          <div class="title-line title-flex">
+            <span class="main-word animate-line">Y</span>
+
+            <span class="subtitle-home">
+              CONOCEMOS LA IMPORTANCIA<br />
+              DE ESTAR BIEN CONECTADOS
+            </span>
+          </div>
+
+          <div class="title-line animate-line">DISTRIBUCIÓN</div>
+          <div class="title-line animate-line">DE CONTENIDO</div>
+        </h1>
+      </div>
+
+      <div class="scene final-scene">
+        <h1 class="title-home single">SOMOS</h1>
+        <img class="icono" src="assets/images/icono.png" alt="Icono empresa" />
+        <img class="logo" src="assets/images/empresa.png" alt="Logo empresa" />
+      </div>
+
+      <div class="social-bar">
+        <span class="social-text">Seguinos</span>
+
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/company/solutionlan-networks/"
+            target="_blank"
+            class="social-icon"
+          >
+            <img src="assets/images/linkedin.svg" alt="LinkedIn" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/solutionlan_networks?igsh=ZmZ6dmN0bGkxbjY4&utm_source=qr"
+            target="_blank"
+            class="social-icon"
+          >
+            <img src="assets/images/instagram.svg" alt="Instagram" />
+          </a>
+        </div>
+      </div>
     </section>
 
     <section id="services">
-        <h2 class="title">SERVICIOS</h2>
-        <p class="subtitle">Soluciones de Comunicaciones para los mercados<br>Wholesale y Corporativo</p>
-
-        <div class="services-container">
-            <div class="service-card-grid">
-
-                <div class="service-card internet">
-                    <div class="service-content">
-                        <h3 class="service-title">Internet</h3>
-
-                        <div class="characteristics-container">
-                            <div class="characteristic top">
-                                <img class="characteristic-img" src="assets/images/icons-globo.png">
-                                <h4 class="characteristic-name">IP Transit</h4>
-                            </div>
-                            <div class="characteristic bottom">
-                                <img class="characteristic-img" src="assets/images/icons-centralized-network.png">
-                                <h4 class="characteristic-name" style="align-self: center;">DIA<br>(Direct Internet
-                                    Access)</h4>
-                            </div>
-                        </div>
-
-                        <hr class="service-card-divider">
-
-                        <p class="service-description">
-                            Conectividad a internet de alta calidad con ancho de banda dedicado
-                            y simétrico.<br><br>Interconexiones internacionales de nivel 1 con
-                            operadores Tier1 redundantes y contenidos locales en toda la región
-                            de Sudamérica.<br><br>Capacidades desde 10 Mb hasta 100 Gb ó mas.
-                        </p>
-
-                        <div class="extra-characteristic">
-                            <img src="assets/images/icons-escudo-de-seguridad.png">
-                            <h4>Servicios con Mitigación DDoS</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="service-card datos">
-                    <div class="service-content">
-                        <h3 class="service-title">Datos</h3>
-
-                        <div class="characteristics-container">
-                            <div class="characteristic top">
-                                <img class="characteristic-img" src="assets/images/icons-internet.png">
-                                <h4 class="characteristic-name">EPL (Ethernet Private Line)</h4>
-                            </div>
-                            <div class="characteristic bottom">
-                                <img class="characteristic-img" src="assets/images/icons-cable.png">
-                                <h4 class="characteristic-name" style="align-self: center;">FO (Fibra Oscura)</h4>
-                            </div>
-                        </div>
-
-                        <hr class="service-card-divider" style=" margin-top: 13px;">
-
-                        <p class="service-description">
-                            Transmisión de Datos entre distintos sitios, garantizando alta disponibilidad
-                            y confiabilidad.<br><br>Servicios de Capa 2, con soporte de QinQ.<br><br>
-                            Capacidades desde 10 Mb hasta 100 Gb ó mas.<br><br>Fibra Oscura sobre la
-                            cobertura de Red de SolutionLan.
-                        </p>
-
-                        <!-- <div class="extra-characteristic">
-                            <img>
-                            <h4>Servicios con Mitigación DDoS</h4>
-                        </div> -->
-                    </div>
-                </div>
-
-                <div class="service-card infraestructura">
-                    <div class="service-content">
-                        <h3 class="service-title">Infraestructura</h3>
-
-                        <div class="characteristics-container">
-                            <div class="characteristic top">
-                                <img class="characteristic-img" src="assets/images/icons-administrador-de-redes.png">
-                                <h4 class="characteristic-name">Proyectos de FTTH</h4>
-                            </div>
-                            <div class="characteristic bottom">
-                                <div class="characteristic-img"></div>
-                                <h4 class="characteristic-name"><br><br></h4>
-                            </div>
-                        </div>
-
-                        <hr class="service-card-divider">
-
-                        <p class="service-description">
-                            Desarrollo de Proyectos de FTTH llave en mano basados en los proyectos
-                            de nuestros clientes<br><br>Diseño, Planificación, Construcción y
-                            Mantenimiento de la Red
-                        </p>
-
-                        <!-- <div class="extra-characteristic">
-                            <img>
-                            <h4>Servicios con Mitigación DDoS</h4>
-                        </div> -->
-                    </div>
-                </div>
-
-            </div>
+      <div class="services-wrapper">
+        <h2 class="title">
+          SOLUCIONES DE DATOS E INTERNET PARA LOS<br />MERCADOS WHOLESALE Y
+          CORPORATIVO
+        </h2>
+        <div class="services-tabs">
+          <div class="tab-highlight"></div>
+          <button class="service-tab animate" data-tab="slide-ip">
+            IP Transit
+          </button>
+          <button class="service-tab" data-tab="slide-dia">DIA</button>
+          <button class="service-tab" data-tab="slide-epl">EPL</button>
+          <button class="service-tab" data-tab="slide-fibra">
+            Fibra Oscura
+          </button>
         </div>
+
+        <div class="services-slider">
+          <div class="service-slide" id="slide-ip">
+            <div class="slide-left">
+              <h3>IP Transit</h3>
+              <p>
+                Conectividad a internet de gran capacidad y alta calidad con
+                ancho de banda dedicado y simétrico, diseñado para Carriers e
+                ISPs.<br /><br />
+                Servicio brindado mediante redes de Fibra Optica y equipamiento
+                redundante de última tecnología.<br /><br />
+                Interconexiones internacionales de nivel 1 con operadores Tier1,
+                redundantes y contenidos locales en toda la región de
+                Sudamérica.
+              </p>
+
+              <div class="extra-characteristic">
+                <img src="assets/images/icons-escudo-de-seguridad.png" alt="Ícono de seguridad"/>
+                <h4>Servicios con Mitigación DDoS</h4>
+              </div>
+            </div>
+
+            <div class="slide-right">
+              <img src="assets/images/IP-img.jpg" alt="Tránsito IP"/>
+            </div>
+          </div>
+
+          <div class="service-slide" id="slide-dia">
+            <div class="slide-left">
+              <h3>DIA (Dedicated Internet Access)</h3>
+              <p>
+                Conectividad a internet de alta calidad con ancho de banda
+                dedicado y simétrico, diseñado según las necesidades de su
+                compañía.<br /><br />
+                Servicio brindado mediante redes de Fibra Optica y equipamiento
+                redundante de última tecnología.<br /><br />
+                Interconexiones internacionales de nivel 1 con operadores Tier1,
+                redundantes y contenidos locales en toda la región de
+                Sudamérica.
+              </p>
+            </div>
+
+            <div class="slide-right">
+              <img src="assets/images/DIA-img.jpg" alt="Acceso a Internet Dedicado"/>
+            </div>
+          </div>
+
+          <div class="service-slide" id="slide-epl">
+            <div class="slide-left">
+              <h3>EPL (Ethernet Private Line)</h3>
+              <p>
+                Servicio de transmisión de datos entre distintos sitios,
+                garantizando alta disponibilidad y confiabilidad, diseñado según
+                las necesidades de su compañía.<br /><br />
+                Servicio brindado mediante redes de Fibra Optica y equipamiento
+                redundante de última tecnología.<br /><br />
+                Servicios de Capa 2, con soporte de QinQ.<br /><br />
+                Capacidades desde 10 Mb hasta 100 Gb ó mas.
+              </p>
+            </div>
+
+            <div class="slide-right">
+              <img src="assets/images/EPL-img.jpg" alt="Línea Privada de Ethernet"/>
+            </div>
+          </div>
+
+          <div class="service-slide" id="slide-fibra">
+            <div class="slide-left">
+              <h3>Fibra Oscura</h3>
+              <p>
+                Servicio de Fibra Optica Oscura sobre la cobertura de Red de
+                SolutionLan.<br /><br />
+                Este servicio está diseñado para Carriers e ISPs o bien para
+                grandes Compañías que requieran gestionar sus propias redes de
+                manera totalmente independiente obteniendo mayor flexibilidad,
+                escalabilidad y seguridad de su propia infraestructura.
+              </p>
+            </div>
+
+            <div class="slide-right">
+              <img src="assets/images/Fibra-img.jpg" alt="Fibra Oscura"/>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="about-us">
-        <div class="about-us-container">
-
-            <div class="about-us-content">
-                <h3 class="about-us-phrase-type1">La pasión y el compromiso por lo que hacemos, nos convierte
-                    en el perfecto socio tecnológico de nuestros clientes.</h3>
-                <div class="about-us-phrase-type2-container">
-                    <p class="about-us-phrase-type2">Somos un Operador Neutral de Telecomunicaciones, con mas de
-                        15 años de operación en el mercado Argentino.</p>
-                    <p class="about-us-phrase-type2">Poseemos cobertura de Red en mas de 14 Municipios de la
-                        Provincia de Buenos Aires, con mas de 1.600 Km de fibra óptica de Red troncal y de
-                        acceso, y mas de 20 Nodos Inalámbricos.</p>
-                </div>
-            </div>
-
-            <hr class="about-us-divider">
-
-            <h3 class="about-us-phrase-type1">Nuestros Valores:</h3>
-
-            <div class="values-content">
-                <div class="value-card left">
-                    <img class="value-img" src="assets/images/logo-valores.png">
-                    <div class="value-info">
-                        <h4 class="value-name">Flexibilidad y Creatividad</h4>
-                        <p class="value-description">Nos adaptamos siempre a las necesidades de nuestros Clientes</p>
-                    </div>
-                </div>
-                <div class="value-card right">
-                    <img class="value-img" src="assets/images/logo-valores.png">
-                    <div class="value-info">
-                        <h4 class="value-name">Agilidad</h4>
-                        <p class="value-description">La rapidez en nuestra respuesta es un valor agregado que
-                            nos caracteriza</p>
-                    </div>
-                </div>
-                <div class="value-card left">
-                    <img class="value-img" src="assets/images/logo-valores.png">
-                    <div class="value-info">
-                        <h4 class="value-name">Equipo</h4>
-                        <p class="value-description">Contamos con un Capital Humano altamente capacitado
-                            tanto a nivel técnico como de servicio</p>
-                    </div>
-                </div>
-                <div class="value-card right">
-                    <img class="value-img" src="assets/images/logo-valores.png">
-                    <div class="value-info">
-                        <h4 class="value-name">Compromiso</h4>
-                        <p class="value-description">Tenemos pasión por lo que hacemos y eso refleja el
-                            compromiso que ponemos en nuestros servicios y Clientes</p>
-                    </div>
-                </div>
-            </div>
-
+      <div class="about-us-title">
+        <h2 class="title">
+          Nuestro compromiso es ofrecer las soluciones<br />de conectividad
+          adecuadas para su negocio.
+        </h2>
+      </div>
+      <div class="about-us-content">
+        <div class="card-about-us">
+          <img
+            class="image-card-about-us"
+            src="assets/images/play-icon-50.png"
+            alt="Ícono tarjeta"
+          />
+          <p class="description-card-about-us">
+            Tecnología de Red Carrier Class redundante
+          </p>
         </div>
+        <div class="card-about-us">
+          <img
+            class="image-card-about-us"
+            src="assets/images/play-icon-50.png"
+            alt="Ícono tarjeta"
+          />
+          <p class="description-card-about-us">
+            Gestión de Red de manera segura, 24x7 y con altos estándares de
+            calidad
+          </p>
+        </div>
+        <div class="card-about-us">
+          <img
+            class="image-card-about-us"
+            src="assets/images/play-icon-50.png"
+            alt="Ícono tarjeta"
+          />
+          <p class="description-card-about-us">SLAs Garantizados</p>
+        </div>
+        <div class="card-about-us">
+          <img
+            class="image-card-about-us"
+            src="assets/images/play-icon-50.png"
+            alt="Ícono tarjeta"
+          />
+          <p class="description-card-about-us">
+            Centro de Operaciones de Red (NOC) 24x7
+          </p>
+        </div>
+        <div class="card-about-us">
+          <img
+            class="image-card-about-us"
+            src="assets/images/play-icon-50.png"
+            alt="Ícono tarjeta"
+          />
+          <p class="description-card-about-us">
+            Supervisión, monitoreo QoS y análisis proactivos continuos
+          </p>
+        </div>
+        <div class="card-about-us">
+          <img
+            class="image-card-about-us"
+            src="assets/images/play-icon-50.png"
+            alt="Ícono tarjeta"
+          />
+          <p class="description-card-about-us">
+            Anchos de banda dedicados, seguros y con alta disponibilidad
+          </p>
+        </div>
+        <div class="card-about-us">
+          <img
+            class="image-card-about-us"
+            src="assets/images/play-icon-50.png"
+            alt="Ícono tarjeta"
+          />
+          <p class="description-card-about-us">
+            Servicios desplegados 100% por fibra óptica
+          </p>
+        </div>
+        <div class="card-about-us">
+          <img
+            class="image-card-about-us"
+            src="assets/images/play-icon-50.png"
+            alt="Ícono tarjeta"
+          />
+          <p class="description-card-about-us">Servicios Segurizados</p>
+        </div>
+      </div>
+      <div class="about-us-values">
+        <h2 class="title">
+          Más de 20 años dedicados al negocio<br />
+          con pasión y compromiso por lo que hacemos
+        </h2>
+
+        <div class="values-content">
+          <div class="values-image">
+            <img src="assets/images/values-bg.jpg" alt="Valores Solution Lan" />
+          </div>
+
+          <div class="value-item flexibility">
+            <div class="value-item-info">
+              <h3>Flexibilidad y Creatividad</h3>
+              <p>
+                Nos adaptamos siempre a las necesidades de nuestros Clientes
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div class="values-bottom commitment">
+            <h3>Compromiso</h3>
+            <p>
+              Tenemos pasión por lo que hacemos y eso refleja el compromiso que
+              ponemos en nuestros servicios y nuestros Clientes
+            </p>
+          </div>
+
+          <div class="value-item agility">
+            <div class="value-item-info">
+              <h3>Agilidad</h3>
+              <p>
+                La rapidez en nuestra respuesta es un valor agregado que nos
+                caracteriza
+              </p>
+            </div>
+            <hr />
+          </div>
+
+          <div></div>
+
+          <div class="value-item team">
+            <div class="value-item-info">
+              <h3>Equipo</h3>
+              <p>
+                Contamos con un Capital Humano altamente capacitado tanto a
+                nivel técnico como de servicio
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="our-network">
-        <h2 class="title">NUESTRA RED</h2>
-        <p class="subtitle">Red Troncal de Fibra Optica | Red de Acceso</p>
-        <div class="network-container">
-            <div class="network-info">
-                <p>
-                    Tecnología de Red Carrier Class redundante<br><br>
-                    Centro de Operaciones de Red (NOC) 24x7<br><br>
-                    Supervisión y análisis proactivos continuos<br><br>
-                    Gestión de Red de manera segura, 24x7 y<br>con altos estándares de calidad
-                </p>
-            </div>
-            <div class="network-map">
-                <img src="assets/images/red-troncal.png" alt="Red Troncal del AMBA" id="redTroncal">
-            </div>
+      <h2 class="title">
+        Nuestra Red está en continuo crecimiento<br />buscando mayor cobertura e
+        innovación tecnológica
+      </h2>
+      <div class="network-container">
+        <div class="network-info">
+          <p>Red troncal de Fibra Optica</p>
+          <p>PoPs de distribución de<br />Red de Acceso y FTTH</p>
+          <p>
+            Tecnología de Red Carrier<br />
+            Class redundante
+          </p>
+          <p>
+            Gestión de Red de manera segura, 24x7 y<br />con altos estándares de
+            calidad
+          </p>
+          <p>Centro de Operaciones de Red (NOC) 24x7</p>
         </div>
+        <div class="network-map">
+          <img
+            src="assets/images/red-troncal.png"
+            alt="Red Troncal del AMBA"
+            id="backbone-network"
+          />
+        </div>
+      </div>
     </section>
 
-    <!-- Modal (pop-up) -->
-    <div id="mapa-modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="caption"></div>
+    <div id="modal-map" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage" alt="Red Troncal del AMBA"/>
+      <div id="caption"></div>
     </div>
 
     <section id="contact">
-        <div class="contact-container">
-            <div class="contact-logo">
-                <img class="contact-img" src="assets/images/icono.png">
-                <img class="contact-company-name" src="assets/images/empresa.png">
-            </div>
-            <div class="contact-form">
-                <h3 id="contact-form-title">Contactanos:</h3>
-                <form>
-                    <div class="form-row">
-                        <!-- <label for="name">Nombre</label> -->
-                        <input type="text" id="name" name="name" placeholder="Nombre" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-column">
-                            <!-- <label for="phone">Teléfono</label> -->
-                            <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
-                        </div>
-                        <div class="form-column">
-                            <!-- <label for="email">Email</label> -->
-                            <input type="email" id="email" name="email" placeholder="Email" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <!-- <label for="message">Mensaje</label> -->
-                        <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
+      <h2 class="title">
+        Contanos cuáles son tus necesidades y te ayudaremos a resolverlas<br />
+        garantizando el éxito de tus operaciones
+      </h2>
+      <div class="contact-container">
+        <div class="contact-logo">
+          <img class="contact-img" src="assets/images/icono.png" alt="Ícono de la empresa"/>
+          <img class="contact-company-name" src="assets/images/empresa.png" alt="Logo de la empresa"/>
         </div>
-        <div class="contact-info">
-            <img id="mail-logo" src="assets/images/icons-mail.png">
-            <p id="contact-mail">contacto@solutionlan.com</p>
+        <div class="contact-form">
+          <form id="mail-form">
+            <div class="form-row">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Nombre"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <div class="form-column">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Teléfono"
+                  required
+                />
+              </div>
+              <div class="form-column">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Mensaje"
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
         </div>
+      </div>
+      <div class="contact-info">
+        <img id="mail-logo" src="assets/images/icons-mail.png" alt="Ícono de Email"/>
+        <p id="contact-mail">solutionlan@solutionlan.com</p>
+      </div>
     </section>
 
-    <footer>
-        <img src="assets/images/logo-footer.png" alt="Logo Solution Lan" href="#">
-        <p>&copy; Copyright 2025 Todos los derechos reservados</p>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#services">Servicios</a></li>
+            <li><a href="#about-us">Nosotros</a></li>
+            <li><a href="#our-network">Nuestra Red</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Servicios</h4>
+          <ul>
+            <li>
+              <a
+                href="#services"
+                class="footer-service-link"
+                data-tab="slide-ip"
+                >IP Transit</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="footer-service-link"
+                data-tab="slide-dia"
+                >DIA</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="footer-service-link"
+                data-tab="slide-epl"
+                >EPL</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="footer-service-link"
+                data-tab="slide-fibra"
+                >Fibra Oscura</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column contact">
+          <h4>Contacto</h4>
+
+          <a href="mailto:solutionlan@solutionlan.com" class="footer-contact">
+            <img src="assets/images/icons-mail-2-50.png" alt="Ícono de Email"/>
+            <p>Escribinos</p>
+          </a>
+
+          <div class="footer-contact">
+            <a
+              href="https://www.linkedin.com/company/solutionlan-networks/"
+              target="_blank"
+              ><img src="assets/images/linkedin.svg" alt="LinkedIn"
+            /></a>
+            <a
+              href="https://www.instagram.com/solutionlan_networks?igsh=ZmZ6dmN0bGkxbjY4&utm_source=qr"
+              target="_blank"
+              ><img src="assets/images/instagram.svg" alt="Instagram"
+            /></a>
+            <p>Visitanos</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-brand">
+        <img src="assets/images/logo-footer.png" alt="Solution Lan Networks" />
+        <p>© Copyright 2026 Todos los derechos reservados</p>
+      </div>
     </footer>
 
     <script src="scripts/main.js"></script>
-</body>
-
+  </body>
 </html>
