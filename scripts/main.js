@@ -11,8 +11,7 @@ window.addEventListener('scroll', () => {
     let currentSection = '';
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 300;
-        const sectionBottom = sectionTop + section.offsetHeight;
+        const sectionTop = section.offsetTop - 200;
 
         if (window.scrollY >= sectionTop) {
             currentSection = section.getAttribute('id');
