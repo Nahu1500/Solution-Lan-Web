@@ -670,6 +670,7 @@ video {
 .extra-characteristic img {
   width: 40px;
   height: 40px;
+  filter: brightness(0) saturate(100%) invert(9%) sepia(88%) saturate(4733%) hue-rotate(290deg) brightness(85%) contrast(96%);
 }
 
 .slide-right img {
@@ -1054,7 +1055,7 @@ video {
 }
 
 .contact-logo img {
-  max-width: 100%;
+  max-width: 480px;
 }
 
 .contact-form.animate {
