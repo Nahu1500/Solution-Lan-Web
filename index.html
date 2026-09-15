@@ -3,12 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solution Lan Networks</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=NombreDeLaFuente&display=swap"
-      rel="stylesheet"
-    />
+    <title>Solution Lan Networks</title>
 
     <link rel="stylesheet" href="styles/styles.css" />
 
@@ -28,6 +24,7 @@
   <body>
     <div class="spinner-container">
       <img
+        loading="lazy"
         src="assets/images/favicon.png"
         alt="Logo de carga"
         class="spinner-logo"
@@ -36,6 +33,7 @@
 
     <div class="video-background">
       <video autoplay muted loop>
+        <source src="assets/videos/background-video.webm" type="video/webm" />
         <source src="assets/videos/background-video.mp4" type="video/mp4" />
         Tu navegador no soporta la etiqueta de video.
       </video>
@@ -44,9 +42,19 @@
     <header>
       <div class="logo-container">
         <a href="#" class="logo">
-          <img src="assets/images/logo.png" alt="Logo Solution Lan Networks" />
+          <img
+            loading="lazy"
+            src="assets/images/logo.png"
+            alt="Logo Solution Lan Networks"
+          />
         </a>
       </div>
+
+      <button class="hamburger-btn" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <div class="nav-container">
         <nav class="navbar">
@@ -56,6 +64,66 @@
             <li><a href="#about-us">NOSOTROS</a></li>
             <li><a href="#our-network">NUESTRA RED</a></li>
             <li><a href="#contact">CONTACTO</a></li>
+
+            <li class="language--mobile">
+              <input
+                type="checkbox"
+                id="language-toggle-mobile"
+                class="language__checkbox--mobile"
+              />
+
+              <label
+                for="language-toggle-mobile"
+                class="language__button--mobile"
+              >
+                <img
+                  loading="lazy"
+                  src="/assets/images/ar.png"
+                  alt="English"
+                  class="language__icon--mobile"
+                />
+                <span class="language__name--mobile">Español</span>
+                <img
+                  loading="lazy"
+                  src="/assets/images/expand_more.png"
+                  alt="Down Arrow"
+                  class="language__arrow-icon--mobile"
+                />
+              </label>
+
+              <div id="language-modal" class="language-modal">
+                <div class="language-modal-content">
+                  <button class="close-btn" aria-label="Abrir Menú Idiomas">
+                    <span></span>
+                    <span></span>
+                  </button>
+                  <div class="language-options">
+                    <div class="language-option">
+                      <a href="en-us/index-en.html">
+                        <img
+                          loading="lazy"
+                          src="/assets/images/us.png"
+                          alt="English"
+                          class="language__icon--mobile"
+                        />
+                        Inglés
+                      </a>
+                    </div>
+                    <div class="language-option">
+                      <a href="index.html">
+                        <img
+                          loading="lazy"
+                          src="/assets/images/ar.png"
+                          alt="Spanish"
+                          class="language__icon--mobile"
+                        />
+                        Español
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
         </nav>
       </div>
@@ -65,8 +133,14 @@
       <input type="checkbox" id="language-toggle" class="language__checkbox" />
 
       <label for="language-toggle" class="language__button">
-        <img src="/assets/images/ar.png" alt="Español" class="language__icon" />
         <img
+          loading="lazy"
+          src="assets/images/ar.png"
+          alt="Español"
+          class="language__icon"
+        />
+        <img
+          loading="lazy"
           src="/assets/images/expand_more.png"
           alt="Flecha Desplegable"
           class="language__arrow-icon"
@@ -77,6 +151,7 @@
         <li>
           <a href="en-us/index-en.html">
             <img
+              loading="lazy"
               src="/assets/images/us.png"
               alt="Inglés"
               class="language__icon"
@@ -87,6 +162,7 @@
         <li>
           <a href="#index">
             <img
+              loading="lazy"
               src="/assets/images/ar.png"
               alt="Español"
               class="language__icon"
@@ -136,9 +212,12 @@
       </div>
 
       <div class="scene final-scene">
-        <h1 class="title-home single">SOMOS</h1>
+        <h1 class="title-home">
+          <div class="title-line">SOMOS</div>
+        </h1>
         <img
-          class="icono"
+          loading="lazy"
+          class="icono logo-final"
           src="assets/images/logo-sin-fondo-final.png"
           alt="Logo empresa"
         />
@@ -153,7 +232,11 @@
             target="_blank"
             class="social-icon"
           >
-            <img src="assets/images/linkedin.svg" alt="LinkedIn" />
+            <img
+              loading="lazy"
+              src="assets/images/linkedin.svg"
+              alt="LinkedIn"
+            />
           </a>
 
           <a
@@ -161,7 +244,11 @@
             target="_blank"
             class="social-icon"
           >
-            <img src="assets/images/instagram.svg" alt="Instagram" />
+            <img
+              loading="lazy"
+              src="assets/images/instagram.svg"
+              alt="Instagram"
+            />
           </a>
         </div>
       </div>
@@ -170,28 +257,48 @@
     <section id="services">
       <div class="services-wrapper">
         <h2 class="title">
-          SOLUCIONES DE DATOS E INTERNET PARA LOS<br />MERCADOS WHOLESALE Y
-          CORPORATIVO
+          SOLUCIONES DE DATOS E INTERNET PARA LOS<br />
+          MERCADOS WHOLESALE Y CORPORATIVO
         </h2>
         <div class="services-tabs">
           <div class="tab-highlight"></div>
           <button class="service-tab animate" data-tab="slide-ip">
-            <img src="assets/images/ip-logo.png" alt="icono IP transit" class="tab-icon" />
+            <img
+              loading="lazy"
+              src="assets/images/ip-logo.png"
+              alt="icono IP transit"
+              class="tab-icon"
+            />
             <span>IP Transit</span>
           </button>
 
           <button class="service-tab" data-tab="slide-dia">
-            <img src="assets/images/dia-logo.png" alt="icono DIA" class="tab-icon" />
+            <img
+              loading="lazy"
+              src="assets/images/dia-logo.png"
+              alt="icono DIA"
+              class="tab-icon"
+            />
             <span>DIA</span>
           </button>
 
           <button class="service-tab" data-tab="slide-epl">
-            <img src="assets/images/ip-logo.png" alt="icono EPL" class="tab-icon" />
+            <img
+              loading="lazy"
+              src="assets/images/ip-logo.png"
+              alt="icono EPL"
+              class="tab-icon"
+            />
             <span>EPL</span>
           </button>
 
           <button class="service-tab" data-tab="slide-fibra">
-            <img src="assets/images/fibra-logo.png" alt="icono Fibra Oscura" class="tab-icon" />
+            <img
+              loading="lazy"
+              src="assets/images/fibra-logo.png"
+              alt="icono Fibra Oscura"
+              class="tab-icon"
+            />
             <span>Fibra Oscura</span>
           </button>
         </div>
@@ -201,19 +308,20 @@
             <div class="slide-left">
               <h3>IP Transit</h3>
               <p>
-                Conectividad a internet de gran capacidad y alta calidad con
+                Conectividad a internet de gran capacidad y alta<br/>calidad con
                 ancho de banda dedicado y simétrico, diseñado para Carriers e
                 ISPs.<br /><br />
-                Servicio brindado mediante redes de Fibra Optica y equipamiento
+                Servicio brindado mediante redes de Fibra Optica<br/>y equipamiento
                 redundante de última tecnología.<br /><br />
                 Interconexiones internacionales de nivel 1 con operadores Tier1,
-                redundantes y contenidos locales en toda la región de
+                redundantes y contenidos locales<br/>en toda la región de
                 Sudamérica.
               </p>
 
               <div class="extra-characteristic">
                 <img
-                  src="assets/images/icons-escudo-de-seguridad.png"
+                  loading="lazy"
+                  src="assets/images/icons-escudo-de-seguridad.webp"
                   alt="Ícono de seguridad"
                 />
                 <h4>Servicios con Mitigación DDoS</h4>
@@ -221,18 +329,22 @@
             </div>
 
             <div class="slide-right">
-              <img src="assets/images/IP-img.jpg" alt="Tránsito IP" />
+              <img
+                loading="lazy"
+                src="assets/images/IP-img.webp"
+                alt="Tránsito IP"
+              />
             </div>
           </div>
 
           <div class="service-slide" id="slide-dia">
             <div class="slide-left">
-              <h3>DIA (Dedicated Internet Access)</h3>
+              <h3>DIA <span>(Dedicated Internet Access)</span></h3>
               <p>
-                Conectividad a internet de alta calidad con ancho de banda
-                dedicado y simétrico, diseñado según las necesidades de su
+                Conectividad a internet de alta calidad con ancho<br/>de banda
+                dedicado y simétrico, diseñado según<br/>las necesidades de su
                 compañía.<br /><br />
-                Servicio brindado mediante redes de Fibra Optica y equipamiento
+                Servicio brindado mediante redes de Fibra Optica<br/>y equipamiento
                 redundante de última tecnología.<br /><br />
                 Interconexiones internacionales de nivel 1 con operadores Tier1,
                 redundantes y contenidos locales en toda la región de
@@ -242,7 +354,8 @@
 
             <div class="slide-right">
               <img
-                src="assets/images/DIA-img.jpg"
+                loading="lazy"
+                src="assets/images/DIA-img.webp"
                 alt="Acceso a Internet Dedicado"
               />
             </div>
@@ -250,12 +363,12 @@
 
           <div class="service-slide" id="slide-epl">
             <div class="slide-left">
-              <h3>EPL (Ethernet Private Line)</h3>
+              <h3>EPL <span>(Ethernet Private Line)</span></h3>
               <p>
                 Servicio de transmisión de datos entre distintos sitios,
                 garantizando alta disponibilidad y confiabilidad, diseñado según
                 las necesidades de su compañía.<br /><br />
-                Servicio brindado mediante redes de Fibra Optica y equipamiento
+                Servicio brindado mediante redes de Fibra Optica<br/>y equipamiento
                 redundante de última tecnología.<br /><br />
                 Servicios de Capa 2, con soporte de QinQ.<br /><br />
                 Capacidades desde 10 Mb hasta 100 Gb ó mas.
@@ -264,7 +377,8 @@
 
             <div class="slide-right">
               <img
-                src="assets/images/EPL-img.jpg"
+                loading="lazy"
+                src="assets/images/EPL-img.webp"
                 alt="Línea Privada de Ethernet"
               />
             </div>
@@ -284,9 +398,20 @@
             </div>
 
             <div class="slide-right">
-              <img src="assets/images/Fibra-img.jpg" alt="Fibra Oscura" />
+              <img
+                loading="lazy"
+                src="assets/images/Fibra-img.webp"
+                alt="Fibra Oscura"
+              />
             </div>
           </div>
+        </div>
+
+        <div class="carousel-dots-container">
+          <div class="carousel-dot active" data-slide="slide-ip"></div>
+          <div class="carousel-dot" data-slide="slide-dia"></div>
+          <div class="carousel-dot" data-slide="slide-epl"></div>
+          <div class="carousel-dot" data-slide="slide-fibra"></div>
         </div>
       </div>
     </section>
@@ -294,8 +419,8 @@
     <section id="about-us">
       <div class="about-us-title">
         <h2 class="title">
-          Nuestro compromiso es ofrecer las soluciones<br />de conectividad
-          adecuadas para su negocio.
+          Nuestro compromiso es ofrecer las soluciones<br />
+          de conectividad adecuadas para su negocio.
         </h2>
       </div>
       <div class="about-us-content">
@@ -304,6 +429,7 @@
             class="image-card-about-us"
             src="assets/images/play-icon-50.png"
             alt="Ícono tarjeta"
+            loading="lazy"
           />
           <p class="description-card-about-us">
             Tecnología de Red Carrier Class redundante
@@ -314,6 +440,7 @@
             class="image-card-about-us"
             src="assets/images/play-icon-50.png"
             alt="Ícono tarjeta"
+            loading="lazy"
           />
           <p class="description-card-about-us">
             Gestión de Red de manera segura, 24x7 y con altos estándares de
@@ -322,6 +449,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="assets/images/play-icon-50.png"
             alt="Ícono tarjeta"
@@ -330,6 +458,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="assets/images/play-icon-50.png"
             alt="Ícono tarjeta"
@@ -340,6 +469,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="assets/images/play-icon-50.png"
             alt="Ícono tarjeta"
@@ -350,6 +480,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="assets/images/play-icon-50.png"
             alt="Ícono tarjeta"
@@ -360,6 +491,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="assets/images/play-icon-50.png"
             alt="Ícono tarjeta"
@@ -370,6 +502,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="assets/images/play-icon-50.png"
             alt="Ícono tarjeta"
@@ -385,14 +518,19 @@
 
         <div class="values-content">
           <div class="values-image">
-            <img src="assets/images/values-bg.jpg" alt="Valores Solution Lan" />
+            <img
+              loading="lazy"
+              src="assets/images/values-bg.webp"
+              alt="Valores Solution Lan"
+            />
           </div>
 
           <div class="value-item flexibility">
             <div class="value-item-info">
               <h3>Flexibilidad y Creatividad</h3>
               <p>
-                Nos adaptamos siempre a las necesidades de nuestros Clientes
+                Nos adaptamos siempre a las<br />
+                necesidades de nuestros Clientes
               </p>
             </div>
             <hr />
@@ -401,17 +539,19 @@
           <div class="values-bottom commitment">
             <h3>Compromiso</h3>
             <p>
-              Tenemos pasión por lo que hacemos y eso refleja el compromiso que
-              ponemos en nuestros servicios y nuestros Clientes
+              Tenemos pasión por lo que hacemos<br />
+              y eso refleja el compromiso que ponemos<br />en nuestros servicios
+              y nuestros Clientes
             </p>
+            <hr class="hr-commitment" />
           </div>
 
           <div class="value-item agility">
             <div class="value-item-info">
               <h3>Agilidad</h3>
               <p>
-                La rapidez en nuestra respuesta es un valor agregado que nos
-                caracteriza
+                La rapidez en nuestra respuesta es<br />
+                un valor agregado que nos caracteriza
               </p>
             </div>
             <hr />
@@ -434,8 +574,8 @@
 
     <section id="our-network">
       <h2 class="title">
-        Nuestra Red está en continuo crecimiento<br />buscando mayor cobertura e
-        innovación tecnológica
+        Nuestra Red está en continuo crecimiento<br />
+        buscando mayor cobertura e innovación tecnológica
       </h2>
       <div class="network-container">
         <div class="network-info">
@@ -453,8 +593,9 @@
         </div>
         <div class="network-map">
           <img
-            src="assets/images/red-troncal.png"
-            alt="Red Troncal del AMBA"
+            loading="lazy"
+            src="assets/images/red-troncal.webp"
+            alt="Red Troncal Buenos Aires"
             id="backbone-network"
           />
         </div>
@@ -463,7 +604,12 @@
 
     <div id="modal-map" class="modal">
       <span class="close">&times;</span>
-      <img class="modal-content" id="modalImage" alt="Red Troncal del AMBA" />
+      <img
+        loading="lazy"
+        class="modal-content"
+        id="modalImage"
+        alt="Red Troncal Buenos Aires"
+      />
       <div id="caption"></div>
     </div>
 
@@ -475,6 +621,7 @@
       <div class="contact-container">
         <div class="contact-logo">
           <img
+            loading="lazy"
             class="contact-img"
             src="assets/images/logo-sin-fondo-final.png"
             alt="Logo de la empresa"
@@ -525,6 +672,7 @@
       </div>
       <a href="mailto:solutionlan@solutionlan.com" class="contact-info">
         <img
+          loading="lazy"
           id="mail-logo"
           src="assets/images/icons-mail.png"
           alt="Ícono de Email"
@@ -587,7 +735,11 @@
           <h4>Contacto</h4>
 
           <a href="mailto:solutionlan@solutionlan.com" class="footer-contact">
-            <img src="assets/images/icons-mail-2-50.png" alt="Ícono de Email" />
+            <img
+              loading="lazy"
+              src="assets/images/icons-mail-2-50.png"
+              alt="Ícono de Email"
+            />
             <p>Escribinos</p>
           </a>
 
@@ -595,19 +747,29 @@
             <a
               href="https://www.linkedin.com/company/solutionlan-networks/"
               target="_blank"
-              ><img src="assets/images/linkedin.svg" alt="LinkedIn"
+              ><img
+                loading="lazy"
+                src="assets/images/linkedin.svg"
+                alt="LinkedIn"
             /></a>
             <a
               href="https://www.instagram.com/solutionlan_networks?igsh=ZmZ6dmN0bGkxbjY4&utm_source=qr"
               target="_blank"
-              ><img src="assets/images/instagram.svg" alt="Instagram"
+              ><img
+                loading="lazy"
+                src="assets/images/instagram.svg"
+                alt="Instagram"
             /></a>
             <p>Visitanos</p>
           </div>
         </div>
       </div>
       <div class="footer-brand">
-        <img src="assets/images/logo-footer.png" alt="Solution Lan Networks" />
+        <img
+          loading="lazy"
+          src="assets/images/logo-footer.png"
+          alt="Solution Lan Networks"
+        />
         <p>© Copyright 2026 Todos los derechos reservados</p>
       </div>
     </footer>

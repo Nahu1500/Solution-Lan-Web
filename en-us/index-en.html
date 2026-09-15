@@ -5,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Solution Lan Networks</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=NombreDeLaFuente&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="stylesheet" href="../styles/styles.css" />
 
     <link
-      id="favicon"
+      id="favicon-en"
       rel="icon"
       href="../assets/images/favicon.png"
       type="image/x-icon"
@@ -28,6 +23,7 @@
   <body>
     <div class="spinner-container">
       <img
+        loading="lazy"
         src="../assets/images/favicon.png"
         alt="Loading Logo"
         class="spinner-logo"
@@ -36,6 +32,10 @@
 
     <div class="video-background">
       <video autoplay muted loop>
+        <source
+          src="../assets/videos/background-video.webm"
+          type="video/webm"
+        />
         <source src="../assets/videos/background-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -45,11 +45,18 @@
       <div class="logo-container">
         <a href="#" class="logo">
           <img
+            loading="lazy"
             src="../assets/images/logo.png"
             alt="Solution Lan Networks Logo"
           />
         </a>
       </div>
+
+      <button class="hamburger-btn" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <div class="nav-container">
         <nav class="navbar">
@@ -59,6 +66,66 @@
             <li><a href="#about-us">ABOUT US</a></li>
             <li><a href="#our-network">OUR NETWORK</a></li>
             <li><a href="#contact">CONTACT</a></li>
+
+            <li class="language--mobile">
+              <input
+                type="checkbox"
+                id="language-toggle-mobile"
+                class="language__checkbox--mobile"
+              />
+
+              <label
+                for="language-toggle-mobile"
+                class="language__button--mobile"
+              >
+                <img
+                  loading="lazy"
+                  src="../assets/images/us.png"
+                  alt="English"
+                  class="language__icon--mobile"
+                />
+                <span class="language__name--mobile">English</span>
+                <img
+                  loading="lazy"
+                  src="../assets/images/expand_more.png"
+                  alt="Down Arrow"
+                  class="language__arrow-icon--mobile"
+                />
+              </label>
+
+              <div id="language-modal" class="language-modal">
+                <div class="language-modal-content">
+                  <button class="close-btn" aria-label="Abrir Menú Idiomas">
+                    <span></span>
+                    <span></span>
+                  </button>
+                  <div class="language-options">
+                    <div class="language-option">
+                      <a href="index-en.html">
+                        <img
+                          loading="lazy"
+                          src="../assets/images/us.png"
+                          alt="English"
+                          class="language__icon--mobile"
+                        />
+                        English
+                      </a>
+                    </div>
+                    <div class="language-option">
+                      <a href="../index.html">
+                        <img
+                          loading="lazy"
+                          src="../assets/images/ar.png"
+                          alt="Spanish"
+                          class="language__icon--mobile"
+                        />
+                        Spanish
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
         </nav>
       </div>
@@ -69,11 +136,13 @@
 
       <label for="language-toggle" class="language__button">
         <img
+          loading="lazy"
           src="../assets/images/us.png"
           alt="English"
           class="language__icon"
         />
         <img
+          loading="lazy"
           src="../assets/images/expand_more.png"
           alt="Dropdown Arrow"
           class="language__arrow-icon"
@@ -84,6 +153,7 @@
         <li>
           <a href="../index.html">
             <img
+              loading="lazy"
               src="../assets/images/ar.png"
               alt="Spanish"
               class="language__icon"
@@ -94,6 +164,7 @@
         <li>
           <a href="#index">
             <img
+              loading="lazy"
               src="../assets/images/us.png"
               alt="English"
               class="language__icon"
@@ -143,9 +214,12 @@
       </div>
 
       <div class="scene final-scene">
-        <h1 class="title-home single">WE ARE</h1>
+        <h1 class="title-home">
+          <div class="title-line">WE ARE</div>
+        </h1>
         <img
-          class="icono"
+          loading="lazy"
+          class="icono logo-final"
           src="../assets/images/logo-sin-fondo-final.png"
           alt="Company Icon"
         />
@@ -160,7 +234,11 @@
             target="_blank"
             class="social-icon"
           >
-            <img src="../assets/images/linkedin.svg" alt="LinkedIn" />
+            <img
+              loading="lazy"
+              src="../assets/images/linkedin.svg"
+              alt="LinkedIn"
+            />
           </a>
 
           <a
@@ -168,7 +246,11 @@
             target="_blank"
             class="social-icon"
           >
-            <img src="../assets/images/instagram.svg" alt="Instagram" />
+            <img
+              loading="lazy"
+              src="../assets/images/instagram.svg"
+              alt="Instagram"
+            />
           </a>
         </div>
       </div>
@@ -177,28 +259,49 @@
     <section id="services">
       <div class="services-wrapper">
         <h2 class="title">
-          DATA AND INTERNET SOLUTIONS FOR<br />WHOLESALE AND CORPORATE MARKETS
+          DATA AND INTERNET SOLUTIONS FOR<br />
+          WHOLESALE AND CORPORATE MARKETS
         </h2>
 
         <div class="services-tabs">
           <div class="tab-highlight"></div>
           <button class="service-tab animate" data-tab="slide-ip">
-            <img src="../assets/images/ip-logo.png" alt="Ip Transit icon" class="tab-icon" />
+            <img
+              loading="lazy"
+              src="../assets/images/ip-logo.png"
+              alt="Ip Transit icon"
+              class="tab-icon"
+            />
             <span>IP Transit</span>
           </button>
 
           <button class="service-tab" data-tab="slide-dia">
-            <img src="../assets/images/dia-logo.png" alt="DIA icon" class="tab-icon" />
+            <img
+              loading="lazy"
+              src="../assets/images/dia-logo.png"
+              alt="DIA icon"
+              class="tab-icon"
+            />
             <span>DIA</span>
           </button>
 
           <button class="service-tab" data-tab="slide-epl">
-            <img src="../assets/images/ip-logo.png" alt="EPL icon" class="tab-icon" />
+            <img
+              loading="lazy"
+              src="../assets/images/ip-logo.png"
+              alt="EPL icon"
+              class="tab-icon"
+            />
             <span>EPL</span>
           </button>
 
           <button class="service-tab" data-tab="slide-fibra">
-            <img src="../assets/images/fibra-logo.png" alt="Dark Fiber icon" class="tab-icon" />
+            <img
+              loading="lazy"
+              src="../assets/images/fibra-logo.png"
+              alt="Dark Fiber icon"
+              class="tab-icon"
+            />
             <span>Dark Fiber</span>
           </button>
         </div>
@@ -220,7 +323,8 @@
 
               <div class="extra-characteristic">
                 <img
-                  src="../assets/images/icons-escudo-de-seguridad.png"
+                  loading="lazy"
+                  src="../assets/images/icons-escudo-de-seguridad.webp"
                   alt="Security Icon"
                 />
                 <h4>Services with DDoS Mitigation</h4>
@@ -228,13 +332,17 @@
             </div>
 
             <div class="slide-right">
-              <img src="../assets/images/IP-img.jpg" alt="IP Transit" />
+              <img
+                loading="lazy"
+                src="../assets/images/IP-img.webp"
+                alt="IP Transit"
+              />
             </div>
           </div>
 
           <div class="service-slide" id="slide-dia">
             <div class="slide-left">
-              <h3>DIA (Dedicated Internet Access)</h3>
+              <h3>DIA <span>(Dedicated Internet Access)</span></h3>
               <p>
                 High quality internet connectivity with dedicated and
                 symmetrical bandwidth, designed according to your company's
@@ -249,7 +357,8 @@
 
             <div class="slide-right">
               <img
-                src="../assets/images/DIA-img.jpg"
+                loading="lazy"
+                src="../assets/images/DIA-img.webp"
                 alt="Dedicated Internet Access"
               />
             </div>
@@ -257,7 +366,7 @@
 
           <div class="service-slide" id="slide-epl">
             <div class="slide-left">
-              <h3>EPL (Ethernet Private Line)</h3>
+              <h3>EPL <span>(Ethernet Private Line)</span></h3>
               <p>
                 Data transmission service between different sites, guaranteeing
                 high availability and reliability, designed according to your
@@ -271,7 +380,8 @@
 
             <div class="slide-right">
               <img
-                src="../assets/images/EPL-img.jpg"
+                loading="lazy"
+                src="../assets/images/EPL-img.webp"
                 alt="Ethernet Private Line"
               />
             </div>
@@ -290,9 +400,20 @@
             </div>
 
             <div class="slide-right">
-              <img src="../assets/images/Fibra-img.jpg" alt="Dark Fiber" />
+              <img
+                loading="lazy"
+                src="../assets/images/Fibra-img.webp"
+                alt="Dark Fiber"
+              />
             </div>
           </div>
+        </div>
+
+        <div class="carousel-dots-container">
+          <div class="carousel-dot active" data-slide="slide-ip"></div>
+          <div class="carousel-dot" data-slide="slide-dia"></div>
+          <div class="carousel-dot" data-slide="slide-epl"></div>
+          <div class="carousel-dot" data-slide="slide-fibra"></div>
         </div>
       </div>
     </section>
@@ -300,13 +421,14 @@
     <section id="about-us">
       <div class="about-us-title">
         <h2 class="title">
-          Our commitment is to offer the right connectivity<br />solutions for
-          your business.
+          Our commitment is to offer the right connectivity<br />
+          solutions for your business.
         </h2>
       </div>
       <div class="about-us-content">
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="../assets/images/play-icon-50.png"
             alt="Card Icon"
@@ -317,6 +439,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="../assets/images/play-icon-50.png"
             alt="Card Icon"
@@ -327,6 +450,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="../assets/images/play-icon-50.png"
             alt="Card Icon"
@@ -335,6 +459,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="../assets/images/play-icon-50.png"
             alt="Card Icon"
@@ -345,6 +470,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="../assets/images/play-icon-50.png"
             alt="Card Icon"
@@ -355,6 +481,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="../assets/images/play-icon-50.png"
             alt="Card Icon"
@@ -365,6 +492,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="../assets/images/play-icon-50.png"
             alt="Card Icon"
@@ -375,6 +503,7 @@
         </div>
         <div class="card-about-us">
           <img
+            loading="lazy"
             class="image-card-about-us"
             src="../assets/images/play-icon-50.png"
             alt="Card Icon"
@@ -391,8 +520,9 @@
         <div class="values-content">
           <div class="values-image">
             <img
-              src="../assets/images/values-bg.jpg"
+              src="../assets/images/values-bg.webp"
               alt="Solution Lan Values"
+              loading="lazy"
             />
           </div>
 
@@ -439,8 +569,8 @@
 
     <section id="our-network">
       <h2 class="title">
-        Our Network is in continuous growth<br />seeking greater coverage and
-        technological innovation
+        Our Network is in continuous growth<br />
+        seeking greater coverage and technological innovation
       </h2>
       <div class="network-container">
         <div class="network-info">
@@ -457,9 +587,10 @@
         </div>
         <div class="network-map">
           <img
-            src="../assets/images/red-troncal.png"
-            alt="AMBA Backbone Network"
+            src="../assets/images/red-troncal.webp"
+            alt="Buenos Aires Backbone Network"
             id="backbone-network"
+            loading="lazy"
           />
         </div>
       </div>
@@ -467,7 +598,12 @@
 
     <div id="modal-map" class="modal">
       <span class="close">&times;</span>
-      <img class="modal-content" id="modalImage" alt="AMBA Backbone Network" />
+      <img
+        loading="lazy"
+        class="modal-content"
+        id="modalImage"
+        alt="Buenos Aires Backbone Network"
+      />
       <div id="caption"></div>
     </div>
 
@@ -479,6 +615,7 @@
       <div class="contact-container">
         <div class="contact-logo">
           <img
+            loading="lazy"
             class="contact-img"
             src="../assets/images/logo-sin-fondo-final.png"
             alt="Company Icon"
@@ -528,7 +665,12 @@
         </div>
       </div>
       <a href="mailto:solutionlan@solutionlan.com" class="contact-info">
-        <img id="mail-logo" src="../assets/images/icons-mail.png" alt="Email Icon"/>
+        <img
+          loading="lazy"
+          id="mail-logo"
+          src="../assets/images/icons-mail.png"
+          alt="Email Icon"
+        />
         <p id="contact-mail">solutionlan@solutionlan.com</p>
       </a>
     </section>
@@ -587,7 +729,11 @@
           <h4>Contact</h4>
 
           <a href="mailto:solutionlan@solutionlan.com" class="footer-contact">
-            <img src="../assets/images/icons-mail-2-50.png" alt="Email Icon" />
+            <img
+              loading="lazy"
+              src="../assets/images/icons-mail-2-50.png"
+              alt="Email Icon"
+            />
             <p>Write to us</p>
           </a>
 
@@ -595,12 +741,18 @@
             <a
               href="https://www.linkedin.com/company/solutionlan-networks/"
               target="_blank"
-              ><img src="../assets/images/linkedin.svg" alt="LinkedIn"
+              ><img
+                loading="lazy"
+                src="../assets/images/linkedin.svg"
+                alt="LinkedIn"
             /></a>
             <a
               href="https://www.instagram.com/solutionlan_networks?igsh=ZmZ6dmN0bGkxbjY4&utm_source=qr"
               target="_blank"
-              ><img src="../assets/images/instagram.svg" alt="Instagram"
+              ><img
+                loading="lazy"
+                src="../assets/images/instagram.svg"
+                alt="Instagram"
             /></a>
             <p>Visit us</p>
           </div>
@@ -608,6 +760,7 @@
       </div>
       <div class="footer-brand">
         <img
+          loading="lazy"
           src="../assets/images/logo-footer.png"
           alt="Solution Lan Networks"
         />
